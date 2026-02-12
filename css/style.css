@@ -1,0 +1,98 @@
+/* ========== Custom Styles (Tailwind CDN 보완) ========== */
+
+/* Skill Tags */
+.skill-tag {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  transition: background-color 150ms, color 150ms;
+}
+
+.dark .skill-tag {
+  background-color: #1f2937;
+  color: #d1d5db;
+}
+
+/* Tech Tags (Projects 섹션) */
+.tech-tag {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.dark .tech-tag {
+  background-color: rgba(30, 58, 138, 0.3);
+  color: #60a5fa;
+}
+
+/* Project Item Divider */
+.project-item + .project-item {
+  padding-top: 3rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+.dark .project-item + .project-item {
+  border-top-color: #1f2937;
+}
+
+/* Active Navigation Link */
+.nav-link.active {
+  color: #2563eb;
+}
+
+.dark .nav-link.active {
+  color: #60a5fa;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #374151;
+}
+
+/* Selection Color */
+::selection {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Smooth transitions for dark mode */
+* {
+  transition-property: background-color, border-color;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}
+
+/* Override transition for interactive elements */
+a, button, input, textarea {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 150ms;
+}
+
+/* Project thumbnail image */
+.project-item img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
