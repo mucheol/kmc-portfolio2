@@ -171,53 +171,46 @@
         <!-- 새 프로젝트는 여기에 추가하세요 -->
 
         <!-- GSAP Interaction -->
-        <div class="project-item py-10 md:py-12">
-          <div class="flex flex-col md:flex-row gap-6 md:gap-8">
-            <!-- Thumbnail -->
-            <div class="md:w-64 flex-shrink-0">
-              <div class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden border">
+        <article class="project-item">
+          <div class="md:flex gap-6">
+            <div class="md:w-64 md:flex-shrink-0 mb-4 md:mb-0">
+              <div class="w-full aspect-video bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
                 <img src="assets/images/gsap-thumb.png" alt="GSAP Interaction 썸네일"
                   class="w-full h-full object-cover"
                   onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-600 text-sm\'>No Image</div>'">
               </div>
             </div>
-            <!-- Content -->
-            <div class="flex-1 min-w-0">
-              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">GSAP Interaction</h3>
-              <!-- Tech Tags -->
-              <div class="flex flex-wrap gap-2 mb-4">
+            <div class="flex-1">
+              <div class="flex flex-wrap items-center gap-3 mb-2">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">GSAP Interaction</h3>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mb-4">
                 <span class="tech-tag">GSAP</span>
-                <span class="tech-tag">HTML5</span>
-                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">ScrollTrigger</span>
                 <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">HTML5</span>
                 <span class="tech-tag">Vercel</span>
               </div>
-              <!-- Description -->
-              <div class="space-y-2 text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-5">
-                <p>GSAP(GreenSock Animation Platform)의 다양한 기능을 직접 구현하고 정리한 인터랙션 연습 프로젝트입니다.</p>
-                <p><code class="bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-xs">gsap.to()</code>, <code class="bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-xs">gsap.from()</code>, <code class="bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-xs">gsap.fromTo()</code>, <code class="bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-xs">Timeline</code> 등 핵심 메서드를 실습하며 ScrollTrigger, Stagger, Parallax, 수평 스크롤, SVG 라인 드로잉, Draggable 등 다양한 인터랙션을 구현했습니다.</p>
-                <p>스크롤에 반응하는 애니메이션과 드래그 앤 드롭 기능을 통해 사용자 경험을 높이는 인터랙티브 웹 구현 역량을 키우기 위해 제작했습니다.</p>
+              <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                <p><strong class="text-gray-700 dark:text-gray-300">프로젝트 개요:</strong> GSAP(GreenSock Animation Platform)의 다양한 기능을 직접 구현하고 정리한 인터랙션 학습 프로젝트입니다. 실무에서 바로 활용할 수 있는 애니메이션 패턴들을 섹션별로 구성했습니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">담당 역할:</strong> 기획·디자인·개발 전체 (기여도 100%, 1인 작업). ScrollTrigger, Stagger, Parallax, 수평 스크롤, SVG 라인 드로잉, Draggable 등 각 기능을 독립 섹션으로 직접 구현했습니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">주요 기능:</strong> 스크롤 반응형 Stagger 애니메이션, 수평 스크롤 패널(3개), 이미지·텍스트 Parallax 효과, 스크롤 연동 SVG 라인 드로잉, 바운드 제한이 있는 Draggable 요소 (실시간 좌표·회전값 추적).</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">기술적 특징:</strong> <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-xs">gsap.to()</code> / <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-xs">gsap.from()</code> / <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-xs">gsap.fromTo()</code> / <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded text-xs">Timeline</code> 핵심 메서드 전체 적용. 이징(Easing) 옵션과 커스텀 애니메이션 컨트롤로 세밀한 모션 제어를 구현했습니다.</p>
               </div>
-              <!-- Links -->
-              <div class="flex flex-wrap gap-3">
-                <a href="https://gsap-interaction.vercel.app/" target="_blank" rel="noopener noreferrer"
-                  class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                  </svg>
+              <div class="flex gap-3">
+                <a href="https://gsap-interaction.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white rounded-md text-xs font-medium hover:bg-blue-700 transition-colors">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                   Live Demo
                 </a>
-                <a href="https://github.com/mucheol/GSAP-Interaction" target="_blank" rel="noopener noreferrer"
-                  class="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-sm font-medium rounded-lg transition-colors">
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                  </svg>
+                <a href="https://github.com/mucheol/GSAP-Interaction" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-800 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-md text-xs font-medium transition-colors">
+                  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                   GitHub
                 </a>
               </div>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- ===== Project: 모바일 청첩장 ===== -->
         <article class="project-item">
@@ -384,6 +377,15 @@
           </div>
         </article>
 
+        <!-- ===== 구분선: 이전 직장 이전 작업물 ===== -->
+        <div class="pt-10 pb-2">
+          <div class="flex items-center gap-4">
+            <div class="flex-1 border-t border-dashed border-gray-300 dark:border-gray-700"></div>
+            <span class="text-xs font-medium text-gray-400 dark:text-gray-500 whitespace-nowrap px-2">그라비티 네오사이언 입사 이전 작업물 · Thinkblock (2022.01 ~ 2023.12)</span>
+            <div class="flex-1 border-t border-dashed border-gray-300 dark:border-gray-700"></div>
+          </div>
+        </div>
+
         <!-- Leopatra -->
         <article class="project-item">
           <div class="md:flex gap-6">
@@ -405,8 +407,10 @@
                 <span class="tech-tag">JavaScript</span>
               </div>
               <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                <p>NFT 판매 홈페이지로 로그인, 상세페이지, 모달창 등 인터넷 쇼핑몰과 같은 양식으로 퍼블리싱한 프로젝트입니다.</p>
-                <p>데스크탑 및 모바일 반응형으로 구현했으며, 퍼블리싱 100% 단독 작업했습니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">프로젝트 개요:</strong> NFT 판매 홈페이지로, 로그인·상세페이지·모달창 등 인터넷 쇼핑몰과 동일한 UI 흐름을 갖춘 퍼블리싱 프로젝트입니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">담당 역할:</strong> 퍼블리싱 100% 단독 작업. 재사용성을 고려한 컴포넌트 기반 HTML 구조로 설계하고 마크업부터 스타일링, 인터랙션까지 전담했습니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">주요 기능:</strong> 로그인/회원가입 플로우, 상품 상세 페이지 전환, 모달 팝업, 버튼 활성화 상태 관리 등 DOM 기반 인터랙션 구현.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">기술적 특징:</strong> CSS 변수와 일관된 클래스 체계로 유지보수성 확보. 데스크탑 기준 퍼블리싱에 부분적 모바일 반응형 지원.</p>
               </div>
               <div class="flex gap-3">
                 <a href="https://leopatrademo.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white rounded-md text-xs font-medium hover:bg-blue-700 transition-colors">
@@ -427,7 +431,7 @@
           <div class="md:flex gap-6">
             <div class="md:w-64 md:flex-shrink-0 mb-4 md:mb-0">
               <div class="w-full aspect-video bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
-                <img src="assets/images/dubai-thumb.png" alt="Dubai NFT Festival 썸네일"
+                <img src="assets/images/dnf-thumb.png" alt="Dubai NFT Festival 썸네일"
                   class="w-full h-full object-cover"
                   onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-600 text-sm\'>No Image</div>'">
               </div>
@@ -443,8 +447,10 @@
                 <span class="tech-tag">JavaScript</span>
               </div>
               <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                <p>VAEX에서 주최한 Dubai NFT Festival 공식 홈페이지입니다. 행사 내용, 연사 등 행사 정보와 컨퍼런스 참가 신청서를 포함한 프로젝트입니다.</p>
-                <p>데스크탑, 노트북, 모바일 반응형으로 구현했으며, 퍼블리싱 100% 단독 작업했습니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">프로젝트 개요:</strong> VAEX가 주최한 Dubai NFT Festival 공식 홈페이지로, 행사 개요·연사 소개·스케줄·컨퍼런스 참가 신청서를 담은 프로모션 사이트입니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">담당 역할:</strong> 퍼블리싱 100% 단독 작업. 디자인 시안 기반으로 마크업과 스타일링, 인터랙션을 직접 구현했습니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">주요 기능:</strong> 이벤트 소개·연사 프로필 다층 구성, 참가 신청 폼 인터페이스, 탭 전환·메뉴 토글 등 ES6 기반 DOM 조작.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">기술적 특징:</strong> CSS Flexbox + Grid 반응형 레이아웃(1440 / 1024 / 768 / 480px 브레이크포인트). 시맨틱 HTML 구조로 데스크탑·노트북·모바일 전 환경 대응.</p>
               </div>
               <div class="flex gap-3">
                 <a href="https://dnf.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white rounded-md text-xs font-medium hover:bg-blue-700 transition-colors">
@@ -483,8 +489,10 @@
                 <span class="tech-tag">Fullpage.js</span>
               </div>
               <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                <p>PIVN 토큰 공식 홈페이지로, 토큰 정보, 로드맵, White Paper 등의 정보를 홈페이지로 제작한 프로젝트입니다.</p>
-                <p>Particles.js와 Fullpage.js 플러그인을 활용해 풀스크린 스크롤 인터랙션을 구현했습니다. 데스크탑, 노트북, 모바일 반응형 지원.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">프로젝트 개요:</strong> PIVN 암호화폐 토큰 공식 홈페이지로, 토큰 정보·로드맵·White Paper 등 5개 섹션으로 구성한 단일 페이지 웹사이트입니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">담당 역할:</strong> 퍼블리싱 100% 단독 작업. 플러그인 선정부터 섹션 구성, 애니메이션 연출까지 전담했습니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">주요 기능:</strong> Fullpage.js 기반 섹션 간 풀스크린 스크롤 네비게이션, Particles.js 파티클 배경 애니메이션, 섹션 전환 시 fade-in 트랜지션 효과.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">기술적 특징:</strong> 다크 배경 + 골드 계열 브랜드 컬러를 CSS 변수로 관리. 데스크탑·노트북·모바일 반응형 대응.</p>
               </div>
               <div class="flex gap-3">
                 <a href="https://pivn.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white rounded-md text-xs font-medium hover:bg-blue-700 transition-colors">
@@ -505,7 +513,7 @@
           <div class="md:flex gap-6">
             <div class="md:w-64 md:flex-shrink-0 mb-4 md:mb-0">
               <div class="w-full aspect-video bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
-                <img src="assets/images/hommeta-thumb.png" alt="Home Number Meta 썸네일"
+                <img src="assets/images/homeNumber-thumb.png" alt="Home Number Meta 썸네일"
                   class="w-full h-full object-cover"
                   onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-600 text-sm\'>No Image</div>'">
               </div>
@@ -520,8 +528,10 @@
                 <span class="tech-tag">CSS3</span>
               </div>
               <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                <p>Home Number Meta의 운송장 시스템 홈페이지로, 관리자 페이지 화면을 개발한 프로젝트입니다.</p>
-                <p>정보 관리, 택배 접수, 회원가입, 로그인 페이지를 포함하며 데스크탑 환경에 최적화된 관리자 UI를 퍼블리싱 100% 단독 작업했습니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">프로젝트 개요:</strong> Home Number Meta의 운송장 관리 시스템 홈페이지로, 사용자 및 관리자 페이지 UI를 퍼블리싱한 프로젝트입니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">담당 역할:</strong> 퍼블리싱 100% 단독 작업. 로그인·회원가입, 택배 접수, 정보 관리 등 4개 페이지 전체를 담당했습니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">주요 기능:</strong> 로그인/회원가입 폼, 택배 운송장 접수 화면, 사용자 정보 관리 페이지, 메인 랜딩 페이지 구성.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">기술적 특징:</strong> Grid + Flexbox 레이아웃으로 데스크탑 최적화 관리자 UI 구현. BEM 준용 클래스 네이밍과 시맨틱 HTML(header, nav, section, footer) 적용.</p>
               </div>
               <div class="flex gap-3">
                 <a href="https://hommeta.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white rounded-md text-xs font-medium hover:bg-blue-700 transition-colors">
@@ -529,43 +539,6 @@
                   Live Demo
                 </a>
                 <a href="https://github.com/mucheol/homeMeta-user" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-800 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-md text-xs font-medium transition-colors">
-                  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- VAEX Manual -->
-        <article class="project-item">
-          <div class="md:flex gap-6">
-            <div class="md:w-64 md:flex-shrink-0 mb-4 md:mb-0">
-              <div class="w-full aspect-video bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
-                <img src="assets/images/vaex-manual-thumb.png" alt="VAEX Manual 썸네일"
-                  class="w-full h-full object-cover"
-                  onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-600 text-sm\'>No Image</div>'">
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="flex flex-wrap items-center gap-3 mb-2">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">VAEX Manual</h3>
-                <span class="text-xs text-gray-500 dark:text-gray-500">2022.04 ~ 2022.05</span>
-              </div>
-              <div class="flex flex-wrap gap-1.5 mb-4">
-                <span class="tech-tag">HTML5</span>
-                <span class="tech-tag">CSS3</span>
-              </div>
-              <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                <p>VAEX 거래소의 매뉴얼을 정리한 홈페이지입니다. 기획부터 퍼블리싱, 호스팅까지 100% 단독으로 진행했습니다.</p>
-                <p>데스크탑 환경에 최적화되어 있으며, 사용자가 거래소 이용 방법을 단계별로 쉽게 파악할 수 있도록 구성했습니다.</p>
-              </div>
-              <div class="flex gap-3">
-                <a href="https://vaexmanual.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white rounded-md text-xs font-medium hover:bg-blue-700 transition-colors">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                  Live Demo
-                </a>
-                <a href="https://github.com/mucheol/manualPage" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-800 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-md text-xs font-medium transition-colors">
                   <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                   GitHub
                 </a>
@@ -596,8 +569,10 @@
                 <span class="tech-tag">Fullpage.js</span>
               </div>
               <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                <p>VAEX 회사의 메인 홈페이지로, 거래소 설명, 비전, 로드맵, 매뉴얼 등 일반적인 기업 홈페이지 형태로 제작했습니다.</p>
-                <p>Fullpage.js를 활용한 풀스크린 스크롤 인터랙션을 구현했으며, 데스크탑, 노트북, 모바일 반응형 지원. 퍼블리싱 100% 및 호스팅까지 단독 진행했습니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">프로젝트 개요:</strong> VAEX 디지털 자산 거래소의 기업 메인 홈페이지로, 거래소 개요·서비스·비전·로드맵·매뉴얼 안내를 담은 정적 웹 페이지입니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">담당 역할:</strong> 퍼블리싱 100% 및 호스팅까지 단독 진행. 기획 단계부터 참여해 전체 콘텐츠 흐름을 설계했습니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">주요 기능:</strong> Fullpage.js 기반 섹션식 풀스크린 스크롤, CSS 애니메이션 콘텐츠 등장 효과, 현재 위치를 표시하는 고정 네비게이션.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">기술적 특징:</strong> 시맨틱 HTML 구조와 브랜드 컬러 기반 일관된 UI 컴포넌트 적용. 데스크탑·노트북·모바일 반응형 대응.</p>
               </div>
               <div class="flex gap-3">
                 <a href="https://vaex.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white rounded-md text-xs font-medium hover:bg-blue-700 transition-colors">
@@ -634,8 +609,10 @@
                 <span class="tech-tag">JavaScript</span>
               </div>
               <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                <p>THINKBLOCK의 메인 홈페이지로, 코인 정보, 로드맵, 멤버 등을 담은 단일 페이지 기업 홈페이지입니다.</p>
-                <p>데스크탑, 노트북, 모바일 반응형으로 구현했으며, 퍼블리싱 100% 및 호스팅까지 단독 진행했습니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">프로젝트 개요:</strong> THINKBLOCK 블록체인 기업의 메인 홈페이지로, 코인 정보·로드맵·팀 멤버 소개를 담은 단일 페이지 기업 홈페이지입니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">담당 역할:</strong> 퍼블리싱 100% 및 호스팅까지 단독 진행. 첫 실무 프로젝트로 전체 마크업·스타일링·배포를 직접 수행했습니다.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">주요 기능:</strong> 코인 소개, 로드맵 타임라인, 팀 멤버 프로필 섹션 구성. 스크롤 애니메이션과 섹션 전환 인터랙션 구현.</p>
+                <p><strong class="text-gray-700 dark:text-gray-300">기술적 특징:</strong> 순수 HTML + CSS + JavaScript만으로 인터랙션 구현. 데스크탑·노트북·모바일 반응형 대응.</p>
               </div>
               <div class="flex gap-3">
                 <a href="https://thinkblock.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white rounded-md text-xs font-medium hover:bg-blue-700 transition-colors">
